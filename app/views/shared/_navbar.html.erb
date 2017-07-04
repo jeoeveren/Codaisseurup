@@ -12,7 +12,7 @@
       <%= link_to "Codaisseurup", root_path, class: "navbar-brand" %>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right button-warning">
 
         <% if !user_signed_in? %>
           <li><%= link_to "Log In", new_user_session_path %></li>
