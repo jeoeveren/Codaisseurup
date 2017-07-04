@@ -1,9 +1,4 @@
 class EventsController < ApplicationController
-
-end
-
-
-class EventssController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update]
   before_action :authenticate_user!, except: [:show]
 
@@ -27,13 +22,14 @@ class EventssController < ApplicationController
     end
   end
 
-  def edit; endevents
+  def edit; end
 
   def update
     if @event.update(event_params)
-      redirect_eventsvent, nevente: "Event updated"
+      redirect_to @event, notice: "Event updated"
     else
-      render :eEvent    end
+      render :edit
+    end
   end
 
   private
