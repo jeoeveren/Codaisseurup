@@ -25,6 +25,12 @@
       <li><%= !@event.active ? ("<del>Active</del>").html_safe : "Active" %></li>
     </ul>
 
+    <!-- Categories -->
+    <h4>Categories</h4>
+    <% @categories.each do |category| %>
+      <span class="label label-success"><%= category.name %></span>
+    <% end %>
+
   </div>
 
 </div>
