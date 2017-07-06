@@ -25,3 +25,9 @@ describe "shared/_navbar.html.erb" do
     end
   end
 end
+
+# it "shows Log In or Sign Up" do
+#   render
+#   expect(rendered).to have_text('Log In')
+#   expect(rendered).to have_text('Sign Up')
+# end

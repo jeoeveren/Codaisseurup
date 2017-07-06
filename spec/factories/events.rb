@@ -1,8 +1,5 @@
-# spec/factories/rooms.rb
-
 FactoryGirl.define do
   factory :event do
-
     name            "jadajadajada"
     description     "Even more jadajadajada"
     location        "Let it be nice"
@@ -12,6 +9,8 @@ FactoryGirl.define do
     includes_drinks false
     user            { build(:user) }
 
+    #categories      { build_list(:categories, 3) }
+
     trait :active do
       active true
     end
@@ -19,5 +18,6 @@ FactoryGirl.define do
     trait :inactive do
       active false
     end
+
   end
 end

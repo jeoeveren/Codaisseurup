@@ -1,5 +1,3 @@
-# spec/factories/profiles.rb
-
 FactoryGirl.define do
   factory :profile do
     first_name  { Faker::Name.first_name }
