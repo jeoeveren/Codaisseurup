@@ -9,6 +9,8 @@ class EventsController < ApplicationController
   #def show; end
   def show
     @categories = @event.categories
+    @photos = @event.photos
+
   end
 
   def new

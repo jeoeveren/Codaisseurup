@@ -6,7 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Category.destroy_all
+
+Photo.delete_all
+Category.delete_all
+Event.delete_all
+Profile.delete_all
+User.delete_all
 User.destroy_all
 
 education = Category.create(name: "Education")
@@ -25,7 +30,7 @@ prince = User.create(email: "prince@alive.com", password: "doves70")
 count = User.all.length
 puts "#{count} Users were created."
 
-event1 = Event.create(name: "Mindfulness retreat",  description:
+event1 = Event.create(name: "Codaisseur retreat",  description:
 "Normcore meh put a bird on it man braid mumblecore, locavore synth swag
 kogi helvetica ugh health goth twee raw denim readymade. Freegan yuccie everyday
 carry tote bag you probably haven't heard of them godard. Meditation tattooed lumbersexual
@@ -45,3 +50,11 @@ starts_at: DateTime.new(2018,02,03), ends_at: DateTime.new(2019,05,07), active: 
 
 count = Event.all.length
 puts "#{count} Events were created."
+
+# Photos
+photo1 = Photo.create(remote_image_url: "https://res.cloudinary.com/jeoeveren/image/upload/v1499343841/CodaisseurUP/IMG_4035_kcb0i6.png", event: event1)
+photo2 = Photo.create(remote_image_url: "https://res.cloudinary.com/jeoeveren/image/upload/v1499343841/CodaisseurUP/IMG_4029_wj7888.png", event: event1)
+photo3 = Photo.create(remote_image_url: "https://res.cloudinary.com/jeoeveren/image/upload/v1499343841/CodaisseurUP/IMG_4030_was0yx.png", event: event1)
+
+count = Photo.all.length
+puts "#{count} Photos were created."
