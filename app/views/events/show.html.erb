@@ -25,10 +25,16 @@
       <li><%= !@event.active ? ("<del>Active</del>").html_safe : "Active" %></li>
     </ul>
 
+    <!-- app/views/rooms/show.html.erb -->
+
     <!-- Photos -->
     <h4>Photos</h4>
     <% @event.photos.each do |photo| %>
-      <%= image_tag photo.image %>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <%= image_tag photo.image.thumbnail %>
+      </div>
+    </div>
     <% end %>
 
     <!-- Categories -->
