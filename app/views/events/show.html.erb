@@ -1,10 +1,26 @@
+<!-- Booking Form -->
+<% if current_user != @event.user %>
+  <div class="panel panel-primary">
+    <div class="panel-heading">Book this event</div>
+
+    <div class="panel-body">
+      <%= render 'bookings/form' %>
+    </div>
+  </div>
+<% end %>
+
+<hr>
+      <!-- existent code... -->
 <div class="panel panel-primary">
+
+
   <div class="panel-heading"><%= @event.name %></div>
 
   <div class="panel-body">
 
     <p>Event: <%= @event.name %></p>
     <p>Host: <%= @event.user.email %></p>
+
 
     <!-- About -->
     <h4>About</h4>
